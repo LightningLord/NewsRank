@@ -5,17 +5,13 @@ describe Article do
   describe "validations" do
     it {should allow_value(1).for(:published)}
     it {should validate_uniqueness_of :canonical_url}
-
-    it "belongs to a feed" do
-    test_feed = Feed.create()
-    article.feed_id = test_feed.id
-    expect(article.feed.id).to eq(test_feed.id)
-    end
+    it {should belong_to :feed}
 
     describe "#add_article" do
       it "adds an article to the database" do
+        #probably want to do something like this:
+        # expect {article.add_article(valid args)}.to change{Article.count}.by(1)
 
-        expect(article.count).to
       end
     end
   end

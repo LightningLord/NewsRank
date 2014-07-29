@@ -16,7 +16,7 @@ describe Article do
       it "adds an article to the database" do
 
         expect(article.count).to
-
+      end
     end
   end
 end

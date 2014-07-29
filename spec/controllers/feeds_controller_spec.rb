@@ -16,5 +16,6 @@ describe FeedsController do
     it "should create an association between the current user and a feed"
 
     it "should create a new feed if the feed doesn't exist in the database"
+  end
 end
 

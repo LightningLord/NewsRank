@@ -7,11 +7,11 @@ describe Feed do
     # it {should allow_mass_assignment_of :attribute}
   end
 
-  it "has many articles" do
-    article1 = Article.create()
-    article2 = Article.create()
-    feed = Feed.create()
-    feed.articles << [article1, article2]
-    expect(feed.articles.length).to eq(2)
+  #use shoulda matchers to test associations
+  describe '#update_feed' do
+    it 'adds helper to db if conditions are met'
+    #create a feed using a let block and make sure the conditions about time will pass
+    #expect(FeedlyHelper.any_instance).to_receive(:add_to_db)
+    #call update_feed
   end
 end
